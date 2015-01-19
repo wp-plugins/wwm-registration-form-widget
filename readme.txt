@@ -11,8 +11,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 WWM Registration Form Widget for trading platform registration. Simple and flexible. 
 
 == Description ==
-WWM Registration Form Widget can manage multiple trading platform registration form on your own WordPress site.
-The form supports ajax submitting, multilingual,customize themecolor and so on.
+The WWM Registration Form Widget can manage and process AlphaTrader/MetaTrader 4 client registration forms using WorldWideMarkets API directly from your WordPress site. This plugin seamlessly integrates with WorldWideMarkets IB Explorer and Affiliate program for Forex trading account referrals. Sidebar widgets and standalone shortcodes are available for easy installation.
+The form supports Ajax submission, multilingual functionality, lead source tracking/email notifications, complete customization of theme color and more.
 
 = Docs & Support =
 
