@@ -1,14 +1,14 @@
 === WWM Registration Form ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: http://support.worldwidemarkets.com/wp-content/plugins/WWM-Registration-Form-Widget/readme.html
-Tags: form, email, ajax, multilingual,worldwidemarkets
+Tags: worldwidemarkets, wwm, forex, fx, introducing broker, ib, forex affiliate, fx affiliate, currency trading form, currency affiliate, form, ajax, multilingual
 Requires at least: 3.4.2
 Tested up to: 4.1
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WWM Registration Form Widget for trading platform registration. Simple and flexible. 
+WWM Registration Form Widget for trader account registrations using AlphaTrader or MetaTrader 4. Simple and flexible. 
 
 == Description ==
 The WWM Registration Form Widget can manage and process AlphaTrader/MetaTrader 4 client registration forms using WorldWideMarkets API - directly from your own WordPress site. Sidebar widget(s) and/or standalone shortcode(s) are available for easy installation.
