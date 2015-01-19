@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+    <meta charset="UTF-8">
+
+    <title>WWM Custom Form</title>
+
+    <style>
+
+        body{background: rgba(200, 200, 200, 0.2);}
+
+        .docHeader{box-shadow: 0px 0px 10px -1px #C8C8C8;width:100%;margin-top:-16px;margin-left:-8px;padding-right:16px;background-color:#fff;position:fixed;z-index:10;}
+
+        .wwmlogo{float:left;padding-left:15%;padding-top: 10px;padding-bottom: 10px;}
+
+        .docHeader >span{position: relative;padding:20px 28% 20px 6%;width:20%;top:30px;font-family: Arial, Helvetica, sans-serif;font-size:1.6em;}
+
+
+
+        .menuhead{ font-family: Arial, Helvetica, sans-serif;width:70%;margin-left:14.8%;margin-right:15%;position:fixed;}
+
+        .mennuhead ul{width:100%;}
+
+        .menuhead ul li{list-style:none;float:left;border-right: 1px solid rgba(0,0,0,.05);padding-bottom:25px;width:20.4%;text-align:center;padding-top:80px;background-color:rgba(242, 242, 242, 1);color:#0c51a3;}
+
+        .menuhead ul a{cursor:pointer;width:14%;}
+
+        .menuhead ul a li:hover{background-color:rgba(12, 81, 163, 0.79);color:#fff;}
+
+        .item1{margin-left:-40px;}
+
+        .docContent{width:70%;margin-left:15%;margin-right:15%;font-family: Arial, Helvetica, sans-serif;background-color:#fff;}
+
+        h4{color:#0c51a3; font-size:1.4em;border-bottom: 1px solid rgba(0,0,0,.08);padding-bottom: 10px;}
+
+        h5{color:#1E3861;font-size:1.1em;}
+
+        .type>p>b{color:#1E3861;font-size: 1.0em;font-weight: bold;}
+
+        #geneInfo{padding-top: 180px;padding-left: 60px;padding-right: 60px;}
+
+        #widget_desc, #shortcode, #translation, #demo{padding-top: 120px;padding-left: 60px;padding-right: 60px;}
+
+        /*.basicSteps{padding:0px 50px;}*/
+
+        #geneInfo>p>b, .basicSteps>p>b,.optionWrap>p>b{font-size:15px;}
+
+        .option_cat{color:#1E3861;font-size: 15px;font-weight: bold;padding: 15px 0px;}
+
+        .optionWrap >img{margin-left:8%;}
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<div class="docHeader">
+
+    <div class="wwmlogo"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/WWMLogo.png" alt="WWM Custom Form User Guide" width="80%"></div>
+
+    <span>Custom Form Plug-in User Guide</span>
+
+</div>
+
+<div class="menuhead">
+
+    <ul class="category_menu">
+
+        <a href="#geneInfo"><li class="item1">General Info</li></a>
+
+        <a href="#widget_desc"><li class="item2">Widget</li></a>
+
+        <a href="#shortcode"><li class="item3">Shortcode</li></a>
+
+        <a href="#translation"><li class="item4">Translation</li></a>
+
+        <a href="#demo"><li class="item5">Demo</li></a>
+
+    </ul>
+
+</div>
+
+
+
+<div class="docContent">
+
+
+
+<div id="geneInfo">
+
+    <h4>1. General info & Installation</h4>
+
+    <p><b>WWM Registration Form</b> is a WordPress plug-in used to add WorldWideMarkets Ltd. account registration forms into your own wordpress site using WorldWideMarkets API. 
+
+        It includes a form builder widget and shortcodes. The form theme color, language, account type, platform type and other variables are able to customize based on your demand.</p>
+
+    <br>
+
+    <h5>1.1 Basic Installation Steps</h5>
+
+    <div class="basicSteps">
+
+        <p><strong>Step 1. </strong>Go to <a href="https://wordpress.org/plugins/" target="_blank">https://wordpress.org/plug-ins/</a> and browse within the Wordpress plug-in directory by searching, &quot;WWM Form Registration Widget&quot;. Here, you will find the Worldwidemarkets.com form plug-in made available for download.</p>
+
+        <p><strong>Step 2.</strong> Click download. Unzip the folder and upload the contents of the folders using FTP under '/wp-content/plug-ins/' directory. Alternative, you may also upload the .ZIP file to your WP Admin panel by accessing, &quot;Plugin -&gt; Add New -&gt; &quot;Upload Plugin&quot; page&quot;. </p>
+
+        <p><strong>Step 3.</strong> Next, you will see the plugin option display in plugins management page within Wordpress &quot;Installed Plugins&quot; page.</p>
+
+        <p><strong>Step 4.</strong> Activate the plugin through the 'Plugins' menu within Wordpress. You can now build your registration form using widget in the sidebar or using shortcodes on pages.</p>
+        
+        <p><strong>Step 5.</strong> Configure plug-in settings by accessing the plugin settings page. To access this page, click "Settings -> WWM Registration Form" link. Here, you can configure master settings for global registration forms.</p>
+
+    </div>
+
+
+
+    <h5>1.2 Setting Options</h5>
+
+    <p>Before adding any registration forms to your wordpress site, we recommend you go through WWM Registration Form Settings first - this is explained in &quot;Step 5 / 1.1 Basic Install Steps&quot; provided above.</p>
+
+    <p>After the plugin is successfully activated, you will be able to see the WWM Registration Form setting option in your admin dashboard.</p>
+
+    <p>There are three type of settings you can edit within the setting page.</p>
+
+    <br/>
+
+    <div class="type">
+
+        <p><b>1.2.1 Form Input Value Settings</b></p>
+
+        <p>There are 4 optional form input values available to edit within the WWM registration form settings. </p>
+        <p>You can enter your IB Hash and Agent ID, OR Affiliate ID and Click ID. This information is provided to you by WordWideMarkets partner program support team. If you are unaware of this information or would like to sign up, please email <a href="mailto: partners@worldwidemarkets.com">partners@worldwidemarkets.com</a></p>
+
+        <p>If the input is kept empty, default values will be added to the form.</p>
+
+        <div class="option">
+
+            <div class="option_cat"> IB Hash</div>
+
+            <div class="option_detail"></div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat"> Agent ID</div>
+
+            <div class="option_detail"></div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat"> Affiliate ID</div>
+
+            <div class="option_detail"></div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat"> Click ID</div>
+
+            <div class="option_detail"></div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat"> Form Message</div>
+
+            <div class="option_detail">The form message will be displayed under the form title. This can be customized.</div>
+
+        </div>
+
+    </div>
+
+    <br/>
+
+    <div class="type">
+
+        <p><b>1.2.2 Email Message Settings</b></p>
+
+        <p>There are three type of options you can edit to change the email information that you will receive. </p>
+
+        <div class="option">
+
+            <div class="option_cat">Recipient Emails</div>
+
+            <div class="option_detail">Recipient Emails is used for specifying the email receiver. By specifying this field, you can receive email for each registration that occurs.</div>
+
+        </div>
+
+        <div class="option">
+
+            <div class="option_cat"> Email Subject</div>
+
+            <div class="option_detail">Email Subject option is used for specifying the email subject of the registration email notification.</div>
+
+        </div>
+
+        <div class="option">
+
+            <div class="option_cat"> Override 'From' Email Address</div>
+
+            <div class="option_detail">By entering a certain email address into this  area, you choose to override the default 'From' email address.</div>
+
+        </div>
+
+    </div>
+
+    <br/>
+
+    <div class="type">
+
+        <p><b>1.2.3 Styling and Validation</b></p>
+
+        <p>By default, some additional CSS is added to your current Wordpress theme. It's recommended to keep this styling in place in order for the forms to display correctly.</p>
+        <p>If there is a CSS conflict with your theme, you can choose to un-tick the CSS Option. This will apply your theme style-sheet to the forms instead of the plugin default style-sheet. </p>
+
+        <p>If you choose to un-tick this option, no further theme color will be changed along with your shortcode. By widget default, the checkbox is checked. </p>
+
+    </div>
+
+    <br>
+
+    <p>* You can always get access to this documentation through /wp-admin/plugins page, the question icon <img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"> in widget and wordpress plugin directory. </p>
+
+
+
+</div>
+
+
+
+<div id="widget_desc">
+
+    <h4>2. Widget</h4>
+
+    <h5>2.1 How to use?</h5>
+
+    <div class="basicSteps">
+
+        <p><b>Basic Steps</b></p>
+
+        <p><strong>Step 1</strong>. Go to Appearance -&gt; Widgets page, then drag-drop WWM Registration form widget to your sidebar.</p>
+
+        <p><strong>Step 2.</strong> Click on the sidebar navigation -> Appearance -> Widgets page. Drag and drop the &quot;WWM Registration Form&quot; widget to any of the sidebars.
+
+            Open the widget in the sidebar and set your form title, platform type,account type,language and other options.</p>
+
+    </div>
+
+
+
+
+
+    <h5>2.2 Available options:</h5>
+
+    <div class="optionWrap">
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.1 Form Title</div>
+
+            <div class="option_detail">
+              <p>The title of the form which will display at the top of the form. The front-end will show the exactly same as what you entered. If the input is empty, form's title will display a default name based on your selection of account type and platform type.                </p>
+              <p>For example) 'AlphaTrader Demo Sign Up', 'MetaTrader4 Live Sign Up'</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.2 Platform</div>
+
+            <div class="option_detail">AlphaTrader/Flash or MetaTrader</div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.3 Spread Type</div>
+
+            <div class="option_detail">Fixed or Variable</div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.4 Account Type</div>
+
+            <div class="option_detail">Demo or Live</div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.5 Language</div>
+
+            <div class="option_detail">English, Arabic, Chinese, Russian and Spanish are available to choose at this time.</div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.6 Theme</div>
+
+            <div class="option_detail">Enter the color Hex color codes. The form's input border and button color with change based on the theme input. Default color is #F73(similar to orange)</div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.11 Source</div>
+
+            <div class="option_detail">The source parameter of your form page. For Example) worldwidemarkets.com </div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">2.2.12 Button Text</div>
+
+            <div class="option_detail">The text that appears on the button.</div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+<div id="shortcode">
+
+    <h4>3. Shortcode</h4>
+
+
+
+    <h5>3.1 [customForm]</h5>
+
+    <div class="optionWrap">
+
+        <p>Optional variables : <b>type, language, theme color, ibid, agentid</b></p>
+
+        <div class="option">
+
+            <div class="option_cat">type</div>
+
+            <div class="option_detail">
+
+                <p>Values:  type: atdemo, atlive, mtdemo, mtlive</p>
+
+                <p>By default  type=’atdemo’</p>
+
+                <p>Example: [customForm type=’mtdemo’ language=’ar’ agented=’1111’]; [customForm type=’atlive’ themecolor=’fff’]</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">language</div>
+
+            <div class="option_detail">
+
+                <p>Values: en, cn, ru, es, ar</p>
+
+                <p>By default language=’en’</p>
+
+                <p>Example: [customForm language=’ar’ agentid=’1111’]; [customForm type=’atlive’ language='es' themecolor=’fff’]</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">themecolor</div>
+
+            <div class="option_detail">
+
+                <p>Values: by typing in the Hex color code no need to input #</p>
+
+                <p>By default themecolor=’F73’</p>
+
+                <p>Will be applied to input border, button and title of the form</p>
+
+                <p>Example: [customForm themecolor='453245' agentid=’1111’]; [customForm type=’mtlive’ language='es' themecolor=’fff’]</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="option">
+
+            <div class="option_cat">ibID</div>
+
+            <div class="option_detail">
+
+                <p>Values: your ibHash</p>
+
+                <p>By default ibid=’BCCCB3E0D76A7D3777E29AB2702379615B083B46’</p>
+
+                <p>Example: [customForm language=’ar’ ibid='NHDD1158A4G10548SFOI45122' agentid=’1111’]; [customForm type=’atdemo’ language='es' ibid='FDW8A4G105412F158048FGH2']</p>
+
+            </div>
+
+        </div>
+
+        <div class="option">
+
+            <div class="option_cat">agentID</div>
+
+            <div class="option_detail">
+
+                <p>Values: your Agent ID</p>
+
+                <p>By default agentid=’1541’</p>
+
+                <p>Example: [customForm language=’ar’  agentid=’1315’]; [customForm type=’mtdemo’ language='cn' agentid='1541' themecolor='153482' ibid='FDW8A4G105412F158048FGH2'’]</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<div id="translation">
+
+    <h4>4. Translation</h4>
+
+    <p>We provide 5 different language options for the form display. These include English, Arabic, Chinese, Russian and Spanish.</p>
+
+    <p>This plugin is also compatible with WPML if you set up your language URL format as different languages in directories or added as a parameter.</p>
+
+    <p>In other words, if your language URL is set up as http://yourdomain.com/ar/ or http://yourdomain.com/?lang=ar for Arabic, the form will be changed to your url language. </p>
+
+    <p>Otherwise, the form language will be set up based on shortcode or widget. English is the default language. </p>
+
+</div>
+
+
+
+<div id="demo">
+
+    <h4>5. Demo</h4>
+
+    <div class="optionWrap">
+
+        <p><b>Sample Widget</b></p>
+
+        <p>After activating the plugin, you can view the WWM Registration Form Widget appear in the Available Widgets. </p>
+
+        <img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/wwm_form_widget.png" alt="WWM Custom Form Widget Sample">
+
+    </div>
+
+    <div class="optionWrap">
+
+        <p>The form displays on the page based on the setting specified above.</p>
+
+        <img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/wwm_widge_sample.png" alt="WWM Custom Form Widget Sample">
+
+    </div>
+
+    <div class="optionWrap">
+
+        <p><b>Sample Shortcode</b></p>
+
+        <p>You could also use shortcode to display on pages and posts.</p>
+
+        <img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/wwm_form_shortcode.png" width="80%" alt="WWM Custom Form Shortcode Sample">
+
+    </div>
+
+    <div class="optionWrap">
+
+        <p>The  form displays on the page based on the above settings.</p>
+
+        <img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/wwm_shortcode_sample.png" alt="WWM Custom Form Shortcode Sample">
+
+    </div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>
