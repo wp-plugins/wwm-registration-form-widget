@@ -5,7 +5,7 @@
  * Plugin Name: WWM Registration Form Widget
  * Plugin URI: http://support.worldwidemarkets.com/wp-content/plugins/WWM-Registration-Form-Widget/readme.html
  * Description: Custom form widget for building your own users sign up form with WWM API
- * Version: Version: 1.0
+ * Version: 1.0
  * Author: WorldWideMarkets
  * Author URI: http://support.worldwidemarkets.com/wp-content/plugins/WWM-Registration-Form-Widget/readme.html
  * Text Domain: Optional. Plugin's text domain for localization. Example: mytextdomain
