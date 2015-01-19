@@ -1,6 +1,4 @@
-/**
- * Created by di.tang on 12/16/2014.
- */
+
 jQuery.noConflict();
 
 jQuery(document).ready(function ($) {
@@ -42,7 +40,7 @@ jQuery(document).ready(function ($) {
     function loadCountryCodes(){
         jQuery.ajax({
             type: "GET",
-            url: "/wp-content/plugins/WWM-Registration-Form-Widget/lib/phonecountrycodes.csv",
+            url: "/wp-content/plugins/wwm-registration-form-widget/lib/phonecountrycodes.csv",
             dataType: "text/csv",
             error: function(data){},
             success: function(data) {},
@@ -122,7 +120,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{digits:"يرجى اختيار دولتك" }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/WWM-Registration-Form-Widget/ajax_post.php";
+                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -193,7 +191,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{digits:"请选择国家" }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/WWM-Registration-Form-Widget/ajax_post.php";
+                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -266,7 +264,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{ digits:"Пожалуйста, выберите страну," }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/WWM-Registration-Form-Widget/ajax_post.php";
+                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -336,7 +334,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{digits:"Por favor seleccione su país" }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/WWM-Registration-Form-Widget/ajax_post.php";
+                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
                         var platformID =$this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -411,7 +409,7 @@ jQuery(document).ready(function ($) {
                     },
                     submitHandler: function (form) {
 
-                        var ajaxurl = "/wp-content/plugins/WWM-Registration-Form-Widget/ajax_post.php";
+                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;

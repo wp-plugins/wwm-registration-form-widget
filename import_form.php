@@ -13,9 +13,9 @@ if(get_option('wwm-email-subject')!=''){ $emailsubject = get_option('wwm-email-s
 if(get_option('wwm-email-from')!=''){ $emailfrom = get_option('wwm-email-from');}
 if(get_option('wwm-css-option')=='1'||  (get_option('wwm-css-option')!=='' && get_option('wwm-css-option')== false)){
     if($slt_language=='2'){
-        wp_enqueue_style('jQuery-wwm-widget', '/wp-content/plugins/WWM-Registration-Form-Widget/css/custom_style_ar.css');
+        wp_enqueue_style('jQuery-wwm-widget', '/wp-content/plugins/wwm-registration-form-widget/css/custom_style_ar.css');
     }else{
-        wp_enqueue_style('jQuery-wwm-widget', '/wp-content/plugins/WWM-Registration-Form-Widget/css/custom_style.css');
+        wp_enqueue_style('jQuery-wwm-widget', '/wp-content/plugins/wwm-registration-form-widget/css/custom_style.css');
     }
 }
 ?>
@@ -69,7 +69,7 @@ if(get_option('wwm-css-option')=='1'||  (get_option('wwm-css-option')!=='' && ge
             <?php
             $rows = array();
             $value =array();
-            $csv='wp-content/plugins/WWM-Registration-Form-Widget/lib/countrycodes.csv';
+            $csv='wp-content/plugins/wwm-registration-form-widget/lib/countrycodes.csv';
             $code = file($csv);
             foreach($code as $key => $val){
                 $rowarray = explode(",",$val);

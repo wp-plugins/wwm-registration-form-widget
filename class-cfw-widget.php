@@ -79,7 +79,7 @@ Class Cfw_Widget extends WP_Widget {
 
         <p>
             <label for="<?php echo $this->get_field_id('spreadType'); ?>"><?php _e('Spread Type:', 'wp_widget_plugin'); ?></label>
-            <a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a>
+            <a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a>
             <select class="widefat" id="<?php echo $this->get_field_id('spreadType'); ?>" name="<?php echo $this->get_field_name('spreadType'); ?>">
                 <?php $options = array( 'Fixed','Variable' );
                 foreach ( $options as $option ) {
@@ -110,19 +110,19 @@ Class Cfw_Widget extends WP_Widget {
 
         <p>
             <label for="<?php echo $this->get_field_id('themecolor'); ?>"><?php _e('Select a Theme:', 'wp_widget_plugin'); ?></label>
-            <a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a><br>
+            <a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a><br>
             <input class="color" id="<?php echo $this->get_field_id('themecolor'); ?>"  name="<?php echo $this->get_field_name('themecolor'); ?>"  value="<?php echo $themecolor;?>" style="color:#fff;background-color:#<?php echo $themecolor;?>"/>
         </p>
 
         <p>
             <label for="<?php echo $this->get_field_id('promo'); ?>"><?php _e('Source:', 'wp_widget_plugin'); ?></label>
-            <a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a>
+            <a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a>
             <input class="widefat" id="<?php echo $this->get_field_id('promo'); ?>" name="<?php echo $this->get_field_name('promo'); ?>" type="text" value="<?php echo $promo; ?>"/>
         </p>
 
         <p>
             <label for="<?php echo $this->get_field_id('btntext'); ?>"><?php _e('Button Text:', 'wp_widget_plugin'); ?></label>
-            <a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a>
+            <a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a>
             <input class="widefat" id="<?php echo $this->get_field_id('btntext'); ?>" name="<?php echo $this->get_field_name('btntext'); ?>" type="text" value="<?php echo $btntext; ?>" placeholder="Enter the text you want to appear on the button"/>
         </p>
     <?php
@@ -317,15 +317,15 @@ function wwm_enqueue_scripts() {
 
         wp_enqueue_script('jquery');
 
-        wp_register_script('jQuery-validate', '/wp-content/plugins/WWM-Registration-Form-Widget/js/jquery.validate.min.js');
+        wp_register_script('jQuery-validate', '/wp-content/plugins/wwm-registration-form-widget/js/jquery.validate.min.js');
         wp_enqueue_script('jQuery-validate');
 
-        wp_register_script('jQuery-wwm-widget', '/wp-content/plugins/WWM-Registration-Form-Widget/js/widget_custom_ajax.js',false,'1.0',false);
+        wp_register_script('jQuery-wwm-widget', '/wp-content/plugins/wwm-registration-form-widget/js/widget_custom_ajax.js',false,'1.0',false);
         wp_enqueue_script('jQuery-wwm-widget');
 
     }else {  //back-end scripts & stylesheet
 
-        wp_register_script('jQuery-jscolor', '/wp-content/plugins/WWM-Registration-Form-Widget/jscolor/jscolor.js');
+        wp_register_script('jQuery-jscolor', '/wp-content/plugins/wwm-registration-form-widget/jscolor/jscolor.js');
         wp_enqueue_script('jQuery-jscolor');
     }
 }
@@ -373,20 +373,20 @@ function wwm_settings_page() {
             <table class="form-table">
                 <tr><th style="width:350px">Input form values below based on your user type</th></tr>
                 <tr valign="top">
-                    <th scope="row">IB Hash<a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a></th>
+                    <th scope="row">IB Hash<a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a></th>
                     <td><input type="text" name="ibhash" value="<?php echo esc_attr( get_option('ibhash') ); ?>" /></td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row">Agent ID<a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a></th>
+                    <th scope="row">Agent ID<a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a></th>
                     <td><input type="text" name="agent_id" value="<?php echo esc_attr( get_option('agent_id') ); ?>" /></td>
                 </tr>
                 <tr><td style="font-weight:bold;font-size:1.3em;">OR</td></tr>
                 <tr valign="top">
-                    <th scope="row">Affiliate ID<a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a></th>
+                    <th scope="row">Affiliate ID<a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a></th>
                     <td><input type="text" name="affiliate_id" value="<?php echo esc_attr( get_option('affiliate_id') ); ?>" /></td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row">Click ID<a href="/wp-content/plugins/WWM-Registration-Form-Widget/readme.html" target="_blank"><img src="/wp-content/plugins/WWM-Registration-Form-Widget/lib/question-y.png" width="14"></a></th>
+                    <th scope="row">Click ID<a href="/wp-content/plugins/wwm-registration-form-widget/readme.html" target="_blank"><img src="/wp-content/plugins/wwm-registration-form-widget/lib/question-y.png" width="14"></a></th>
                     <td><input type="text" name="click_id" value="<?php echo esc_attr( get_option('click_id') ); ?>" /></td>
                 </tr>
                 <tr valign="top">

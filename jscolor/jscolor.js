@@ -13,7 +13,7 @@
 var jscolor = {
 
 
-	dir : '/wp-content/plugins/WWM-Registration-Form-Widget/jscolor/', // location of jscolor directory (leave empty to autodetect)
+	dir : '/wp-content/plugins/wwm-registration-form-widget/jscolor/', // location of jscolor directory (leave empty to autodetect)
 	bindClass : 'color', // class name
 	binding : true, // automatic binding via <input class="...">
 	preloading : false, // use image preloading?

@@ -2,8 +2,8 @@
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: http://support.worldwidemarkets.com/wp-content/plugins/WWM-Registration-Form-Widget/readme.html
 Tags: form, email, ajax, multilingual,worldwidemarkets
-Requires at least: 3.0.1
-Tested up to: 3.4
+Requires at least: 3.4.2
+Tested up to: 4.1
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -38,7 +38,7 @@ You can go to settings option or edit within the shortcode/Widget.
 No.You are only allowed to use IB Hash and Agent ID, OR Affiliate ID and Click ID.
 
 == Screenshots ==
-Screenshot is saved under directory '/wp-content/plugins/WWM-Registration-Form-Widget/lib/'
+Screenshot is saved under plugin directory '/lib/'
 
 1. Two screenshots for widget sample
 

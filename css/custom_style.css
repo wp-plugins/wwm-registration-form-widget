@@ -52,7 +52,7 @@ label {color: #1E3861;}
 
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"], textarea, select {width: 100% !important;font-size: 14px !important;margin: 0 !important;box-sizing: border-box;background: #FDFDFD;}
 
-.w_step-num2 {background: url(/wp-content/plugins/WWM-Registration-Form-Widget/lib/doc_ref_0c51a3.png) no-repeat;padding: 3px 13px 6px 9px;background-position: -60px -60px;width: 67px;color: #FFF;}
+.w_step-num2 {background: url(/wp-content/plugins/wwm-registration-form-widget/lib/doc_ref_0c51a3.png) no-repeat;padding: 3px 13px 6px 9px;background-position: -60px -60px;width: 67px;color: #FFF;}
 
 button, input[type="submit"] {box-sizing: border-box !important;}
 
@@ -88,7 +88,7 @@ a .w_mobile_btn:hover{ background-color: #0C78BE!important;text-decoration:none;
 
 .wwm_widget_wrap{padding-bottom: 20px;font-size: 14px; font-weight: bold;}
 
-.w_step-num{background: url(/wp-content/plugins/WWM-Registration-Form-Widget/lib/doc_ref_0c51a3.png) no-repeat;padding: 3px 13px 6px 9px;background-position: -60px -60px;width: 67px;color: #fff;}
+.w_step-num{background: url(/wp-content/plugins/wwm-registration-form-widget/lib/doc_ref_0c51a3.png) no-repeat;padding: 3px 13px 6px 9px;background-position: -60px -60px;width: 67px;color: #fff;}
 
 .w_step{margin-left:9%; margin-bottom: 10px;font-weight: bold;text-align: left;}
 
