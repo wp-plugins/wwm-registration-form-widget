@@ -141,14 +141,22 @@ jQuery(document).ready(function ($) {
                             data: dataString,
                             dataType: 'json',
                             success: function (data) {
-
-                                var login_msg = '<div class="w_success"><h6>تهانينا!</h6><p>حساب التداول الخاص بك WorldWideMarkets نشط الآن.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> تسجيل الدخول إلى حسابك</span></div><div class="w_info">Login:</div>';
-                                var accname = data.acc;
-                                var accno = '<div class="w_returnInfo">' + accname + '</div>';
-                                var login_msg2 = '<div class="w_info">Password:</div>';
-                                var password = '<div class="w_returnInfo">' + data.password + '</div>';
-                                var msg2 = '<p class="w_extraMsg">* هام: يرجى تسجيل أوراق اعتماد تسجيل الدخول الخاص بك، والمضي قدما لتحميل. تم بالبريد الإلكتروني تسجيل الدخول وكلمة المرور أيضا لك.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> اختيار منصة التداول</span></div>';
-                                $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                if(data.isSuc=='1') {
+                                    var login_msg = '<div class="w_success"><h6>تهانينا!</h6><p>حساب التداول الخاص بك WorldWideMarkets نشط الآن.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> تسجيل الدخول إلى حسابك</span></div><div class="w_info">Login:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">Password:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    var msg2 = '<p class="w_extraMsg">* هام: يرجى تسجيل أوراق اعتماد تسجيل الدخول الخاص بك، والمضي قدما لتحميل. تم بالبريد الإلكتروني تسجيل الدخول وكلمة المرور أيضا لك.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> اختيار منصة التداول</span></div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                }else if(data.isSuc=='0'){
+                                    var login_msg = '<div class="w_success"><h6>خطأ !</h6><p>حساب WorldWideMarkets الخاص بك هو فشل طلب التسجيل.</p></div><div class="w_step"><span class="w_step-title"> يرجى الاتصال WWM:<a href="mailto:backoffice@worldwidemarkets.com">backoffice@worldwidemarkets.com</a></span></div><div class="w_info">رسالة الخطأ:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">correlationID:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password);
+                                }
                             }
                         });  //end ajax
                     }  // end submitHandler
@@ -214,13 +222,22 @@ jQuery(document).ready(function ($) {
                             dataType: 'json',
                             success: function (data) {
                               //  alert(dataString);
-                                var login_msg = '<div class="w_success"><h6>祝贺您!</h6><p>您的 WorldWideMarkets 交易账户现已激活.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> 登陆您的账户</span></div><div class="w_info">Login:</div>';
-                                var accname = data.acc;
-                                var accno = '<div class="w_returnInfo">' + accname + '</div>';
-                                var login_msg2 = '<div class="w_info">Password:</div>';
-                                var password = '<div class="w_returnInfo">' + data.password + '</div>';
-                                var msg2 = '<p class="w_extraMsg">*重要提示：请记录下您的登录凭据并继续下载。您的登录名和密码将通过电子邮件发送给您。</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> 请选择交易平台</span></div>';
-                                $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                if(data.isSuc=='1') {
+                                    var login_msg = '<div class="w_success"><h6>祝贺您!</h6><p>您的 WorldWideMarkets 交易账户现已激活.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> 登陆您的账户</span></div><div class="w_info">Login:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">Password:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    var msg2 = '<p class="w_extraMsg">*重要提示：请记录下您的登录凭据并继续下载。您的登录名和密码将通过电子邮件发送给您。</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> 请选择交易平台</span></div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                }else if(data.isSuc=='0'){
+                                    var login_msg = '<div class="w_success"><h6>很抱歉，出现错误!</h6><p>您的 WorldWideMarkets 交易账户注册失败.</p></div><div class="w_step"><span class="w_step-title"> 请联系WWM: <a href="mailto:backoffice@worldwidemarkets.com">backoffice@worldwidemarkets.com</a></span></div><div class="w_info">Error Message:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">correlationID:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password);
+                                }
                             }
                         });  //end ajax
 
@@ -285,13 +302,22 @@ jQuery(document).ready(function ($) {
                             data: dataString,
                             dataType: 'json',
                             success: function (data) {
-                                var login_msg = '<div class="w_success"><h6>Поздравляем!</h6><p>Ваше WorldWideMarkets торговый счет теперь активен.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> Войти в свой аккаунт</span></div><div class="w_info">Login:</div>';
-                                var accname = data.acc;
-                                var accno = '<div class="w_returnInfo">' + accname + '</div>';
-                                var login_msg2 = '<div class="w_info">Password:</div>';
-                                var password = '<div class="w_returnInfo">' + data.password + '</div>';
-                                var msg2 = '<p class="w_extraMsg">* Важно: Пожалуйста, запишите свой логин и пароль и нажмите кнопку скачать. Логин и пароль также по электронной почте к вам.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> Выберите торговую платформу</span></div>';
-                                $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                if(data.isSuc=='1') {
+                                    var login_msg = '<div class="w_success"><h6>Поздравляем!</h6><p>Ваше WorldWideMarkets торговый счет теперь активен.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> Войти в свой аккаунт</span></div><div class="w_info">Login:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">Password:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    var msg2 = '<p class="w_extraMsg">* Важно: Пожалуйста, запишите свой логин и пароль и нажмите кнопку скачать. Логин и пароль также по электронной почте к вам.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> Выберите торговую платформу</span></div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                }else if(data.isSuc=='0'){
+                                    var login_msg = '<div class="w_success"><h6>ошибка !</h6><p>Ваши WorldWideMarkets кабинет Регистрация просьба не удалось.</p></div><div class="w_step"><span class="w_step-title"> Пожалуйста, свяжитесь с WWM: <a href="mailto:backoffice@worldwidemarkets.com">backoffice@worldwidemarkets.com</a></span></div><div class="w_info">Сообщение об ошибке:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">correlationID:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password);
+                                }
                             }
                         });  //end ajax
                     }  // end submitHandler
@@ -355,13 +381,22 @@ jQuery(document).ready(function ($) {
                             data: dataString,
                             dataType: 'json',
                             success: function (data) {
-                                var login_msg = '<div class="w_success"><h6>¡Enhorabuena!</h6><p>WorldWideMarkets su cuenta de operaciones se ha activado.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> Ingrese a su cuenta</span></div><div class="w_info">Login:</div>';
-                                var accname = data.acc;
-                                var accno = '<div class="w_returnInfo">' + accname + '</div>';
-                                var login_msg2 = '<div class="w_info">Password:</div>';
-                                var password = '<div class="w_returnInfo">' + data.password + '</div>';
-                                var msg2 = '<p class="w_extraMsg">* Importante: Por favor, registre sus credenciales de inicio de sesión y proceder a la descarga. Nombre de usuario y la contraseña también fueron enviadas por correo electrónico.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> Elija una plataforma de negociación</span></div>';
-                                $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                if(data.isSuc=='1') {
+                                    var login_msg = '<div class="w_success"><h6>¡Enhorabuena!</h6><p>WorldWideMarkets su cuenta de operaciones se ha activado.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> Ingrese a su cuenta</span></div><div class="w_info">Login:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">Password:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    var msg2 = '<p class="w_extraMsg">* Importante: Por favor, registre sus credenciales de inicio de sesión y proceder a la descarga. Nombre de usuario y la contraseña también fueron enviadas por correo electrónico.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> Elija una plataforma de negociación</span></div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                }else if(data.isSuc=='0'){
+                                    var login_msg = '<div class="w_success"><h6>Error !</h6><p>Sus WorldWideMarkets representan solicitud de registro se falla.</p></div><div class="w_step"><span class="w_step-title"> Póngase en contacto con WWM: <a href="mailto:backoffice@worldwidemarkets.com">backoffice@worldwidemarkets.com</a></span></div><div class="w_info">Error Mensaje:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">correlationID:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password);
+                                }
                             }
                         });  //end ajax
                     }  // end submitHandler
@@ -430,13 +465,22 @@ jQuery(document).ready(function ($) {
                             data: dataString,
                             dataType: 'json',
                             success: function (data) {
-                                var login_msg = '<div class="w_success"><h6>Congratulations!</h6><p>Your WorldWideMarkets trading account is now active.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> Log On to Your Account</span></div><div class="w_info">Login:</div>';
-                                var accname = data.acc;
-                                var accno = '<div class="w_returnInfo">' + accname + '</div>';
-                                var login_msg2 = '<div class="w_info">Password:</div>';
-                                var password = '<div class="w_returnInfo">' + data.password + '</div>';
-                                var msg2 = '<p class="w_extraMsg">*Important: Please record your Login credentials and proceed to download. Your Login and Password were also emailed to you.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> Choose a Trading Platform</span></div>';
-                                $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                if(data.isSuc=='1') {
+                                    var login_msg = '<div class="w_success"><h6>Congratulations!</h6><p>Your WorldWideMarkets trading account is now active.</p></div><div class="w_step"><i class="w_step-num">1</i><span class="w_step-title"> Log On to Your Account</span></div><div class="w_info">Login:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">Password:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    var msg2 = '<p class="w_extraMsg">*Important: Please record your Login credentials and proceed to download. Your Login and Password were also emailed to you.</p><div class="w_step"><i class="w_step-num2"> 2 </i><span class="w_step-title"> Choose a Trading Platform</span></div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password).append(msg2).append(pclink).append(mobilelink).append(altlinks);
+                                }else if(data.isSuc=='0'){
+                                    var login_msg = '<div class="w_success"><h6>Error !</h6><p>Your WorldWideMarkets account registration request is failed.</p></div><div class="w_step"><span class="w_step-title"> Please Contact WWM: <a href="mailto:backoffice@worldwidemarkets.com">backoffice@worldwidemarkets.com</a></span></div><div class="w_info">Error Message:</div>';
+                                    var accname = data.acc;
+                                    var accno = '<div class="w_returnInfo">' + accname + '</div>';
+                                    var login_msg2 = '<div class="w_info">correlationID:</div>';
+                                    var password = '<div class="w_returnInfo">' + data.password + '</div>';
+                                    $this.parent().html(login_msg).append(accno).append(login_msg2).append(password);
+                                }
                             }
                         });  //end ajax
 
