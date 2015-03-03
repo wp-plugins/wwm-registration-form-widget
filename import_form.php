@@ -1,4 +1,7 @@
-<?php include('lib/multi_lang.php');
+<?php
+
+//plugin is activated
+include('lib/multi_lang.php');
 
 // get options value
 global $options;
@@ -30,7 +33,9 @@ if(get_option('wwm-css-option')=='1'||  (get_option('wwm-css-option')!=='' && ge
     $onlineip = getenv('REMOTE_ADDR');
 } else {
     $onlineip = $_SERVER['REMOTE_ADDR'];
-}?>
+}
+    wp_nonce_field( 'wwm_create_nonce' );
+    ?>
 <input type="hidden" name="ipAddress" value="<?=$onlineip;?>"/>
 
 <input type="hidden" name="instance" id="w_instance" value="<?php echo $inst;?>"/> <!-- To Due: 1 is AT, 100 is MT-->
