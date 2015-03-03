@@ -1,11 +1,10 @@
 <?php
-//require_once(ABSPATH .'wp-includes/pluggable.php');
+
 if (!function_exists('add_action')) {
    require_once("../../../wp-load.php");
 }
 include_once(ABSPATH .'wp-admin/includes/plugin.php');
 if ( is_plugin_active( 'wwm-registration-form-widget/class-cfw-widget.php' ) ) {
-   // if (!check_ajax_referer("wwm_create_nonce")) {
     if(!wp_verify_nonce($_REQUEST['_wpnonce'],'wwm_create_nonce')){
         die( 'Security check' );
     } else {
@@ -135,7 +134,7 @@ if ( is_plugin_active( 'wwm-registration-form-widget/class-cfw-widget.php' ) ) {
             //send email
             if (isset($_POST['emailto'])) {
                 if($_POST['emailto']!=''){$to = $_POST['emailto'];
-                }else{$to = 'dee.t1989@gmail.com';}
+                }else{$to = 'info@forexblast.com';}
             }
             if (isset ($_POST['emailsubject'])) {
                 if($_POST['emailsubject']!=''){$subject = $_POST['emailsubject'];
@@ -166,9 +165,7 @@ if ( is_plugin_active( 'wwm-registration-form-widget/class-cfw-widget.php' ) ) {
              if ($emailfrom != '') {
                  $headers .= 'From: ' . $emailfrom . "\r\n";
              }
-             /*$headers = 'From: info@forexblast.com' . "\r\n" .
-                 'Reply-To: info@forexblast.com' . "\r\n" .
-                 'X-Mailer: PHP/' . phpversion();*/
+
              mail($to, $subject, $message, $headers);
 
             //post to TAB-API
