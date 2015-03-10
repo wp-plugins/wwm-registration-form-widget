@@ -120,7 +120,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{digits:"يرجى اختيار دولتك" }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
+                        var ajaxurl = wwmAjaxData.ajaxurl;
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -133,7 +133,7 @@ jQuery(document).ready(function ($) {
                             mobilelink = '<a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank"><div class="w_mobile_btn">MetaTrader 4 iPhone</div></a><span class="txt-11">(iPhone, iPad and iPod Touch)</span>';
 							altlinks = '<ul class="margin-bottom-0"><li class="padding-bottom-5"><strong>PHONES</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPhone</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li><li class="padding-bottom-5"><strong>TABLETS</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPad</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li></ul>';
                         }
-                        var dataString = $this.serialize();
+                        var dataString ='action=wwm_action&' + $this.serialize();
                         jQuery.ajax({
                             type: 'POST',
                             url: ajaxurl,
@@ -199,7 +199,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{digits:"请选择国家" }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
+                        var ajaxurl = wwmAjaxData.ajaxurl;
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -213,7 +213,7 @@ jQuery(document).ready(function ($) {
 							altlinks = '<ul class="margin-bottom-0"><li class="padding-bottom-5"><strong>PHONES</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPhone</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li><li class="padding-bottom-5"><strong>TABLETS</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPad</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li></ul>';
                         }
 
-                        var dataString = $this.serialize();
+                        var dataString ='action=wwm_action&' + $this.serialize();
                         jQuery.ajax({
                             type: 'POST',
                             url: ajaxurl,
@@ -281,7 +281,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{ digits:"Пожалуйста, выберите страну," }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
+                        var ajaxurl = wwmAjaxData.ajaxurl;
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -294,7 +294,7 @@ jQuery(document).ready(function ($) {
                             mobilelink = '<a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank"><div class="w_mobile_btn">MetaTrader 4 iPhone</div></a><span class="txt-11">(iPhone, iPad and iPod Touch)</span>';
 							altlinks = '<ul class="margin-bottom-0"><li class="padding-bottom-5"><strong>PHONES</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPhone</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li><li class="padding-bottom-5"><strong>TABLETS</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPad</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li></ul>';
                         }
-                        var dataString = $this.serialize();
+                        var dataString ='action=wwm_action&' + $this.serialize();
                         jQuery.ajax({
                             type: 'POST',
                             url: ajaxurl,
@@ -360,7 +360,7 @@ jQuery(document).ready(function ($) {
                         slt_country:{digits:"Por favor seleccione su país" }
                     },
                     submitHandler: function (form) {
-                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
+                        var ajaxurl = wwmAjaxData.ajaxurl;
                         var platformID =$this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -373,7 +373,7 @@ jQuery(document).ready(function ($) {
                             mobilelink = '<a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank"><div class="w_mobile_btn">MetaTrader 4 iPhone</div></a><span class="txt-11">(iPhone, iPad and iPod Touch)</span>';
 							altlinks = '<ul class="margin-bottom-0"><li class="padding-bottom-5"><strong>PHONES</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPhone</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li><li class="padding-bottom-5"><strong>TABLETS</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPad</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li></ul>';
                         }
-                        var dataString = $this.serialize();
+                        var dataString ='action=wwm_action&' + $this.serialize();
                         jQuery.ajax({
                             type: 'POST',
                             url: ajaxurl,
@@ -444,7 +444,7 @@ jQuery(document).ready(function ($) {
                     },
                     submitHandler: function (form) {
 
-                        var ajaxurl = "/wp-content/plugins/wwm-registration-form-widget/ajax_post.php";
+                        var ajaxurl = wwmAjaxData.ajaxurl;
                         var platformID = $this.children("input[name='platformID']").val();
                         var pclink;
                         var mobilelink;
@@ -457,7 +457,7 @@ jQuery(document).ready(function ($) {
                             mobilelink = '<a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank"><div class="w_mobile_btn">MetaTrader 4 iPhone</div></a><span class="txt-11">(iPhone, iPad and iPod Touch)</span>';
 							altlinks = '<ul class="margin-bottom-0"><li class="padding-bottom-5"><strong>PHONES</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPhone</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li><li class="padding-bottom-5"><strong>TABLETS</strong> <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596" target="_blank">iPad</a>® | <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4" target="_blank">Android</a>™</li></ul>';
                         }
-                        var dataString = $this.serialize();
+                        var dataString ='action=wwm_action&' + $this.serialize();
                         jQuery.ajax({
                             type: 'POST',
                             url: ajaxurl,
