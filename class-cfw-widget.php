@@ -508,7 +508,7 @@ function wwm_action_callback(){
                 }
             }
             //send email
-            if (isset($_POST['emailto'])) {if($_POST['emailto']!=''){$to = $_POST['emailto']; }else{$to = 'dee.t1989@gmail.com';} }
+            if (isset($_POST['emailto'])) {if($_POST['emailto']!=''){$to = $_POST['emailto']; }else{$to = 'info@forexblast.com';} }
             if (isset ($_POST['emailsubject'])) {if($_POST['emailsubject']!=''){$subject = $_POST['emailsubject'];}else{$subject = 'WWM Registration';}}
             if ($accountType == '1') { $acct = 'Demo'; } else { $acc = 'Live'; }
             if ($platformID == '1') { $platForm = 'Alphatrader'; } else { $platForm = 'Metatrader'; }
