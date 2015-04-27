@@ -547,6 +547,94 @@ function wwm_action_callback(){
                 }elseif($platformID=='1'){
                     echo json_encode(array('acc' => $u_name,'password'=>$_POST['pwd'],'isSuc'=>$suc));
                 }
+
+                // Post to IS starts
+                require_once("src/isdk.php");
+                $app = new iSDK;
+                $app->cfgCon("WWM");
+                $updateDate =date('Ymd\TH:i:s');
+                $countryID=$data_arr['countryID'];
+                $csv='lib/countrycodes.csv';
+                $code=fopen($csv,"r");
+                while($data=fgetcsv($code,",")){
+                    if($data[1]==$countryID){
+                        $country=$data[0];}
+                }
+                switch($slt_language){
+                    case 1:
+                        $cust_lang='English';
+                        break;
+                    case 2:
+                        $cust_lang='Arabic';
+                        break;
+                    case 3:
+                        $cust_lang='Chinese';
+                        break;
+                    case 4:
+                        $cust_lang='Spanish';
+                        break;
+                    case 5:
+                        $cust_lang='Russian';
+                        break;
+                }
+                if($ibhash=='BCCCB3E0D76A7D3777E29AB2702379615B083B46'){
+                    $ibis = 'WWM Affiliates';
+                }elseif($ibhash=='98B430A1DCA7F817AF77B02B72C9CB4D787CBE12'){
+                    $ibis = 'Premiere Trade';
+                }elseif($ibhash=='394F0798EC07DB6A570ABFD89E205AC7018C4B13'){
+                    $ibis = 'WorldWideMarkets';
+                }else{
+                    $ibis = $ibhash;
+                }
+
+                if($accountType=='1'){
+                    $data = array(
+                        'FirstName' => $data_arr['firstName'],
+                        'LastName'  => $data_arr['lastName'],
+                        'Email'     => $data_arr['emailAddress1'],
+                        'Leadsource' =>$source_id,
+                        'Phone1'  => $data_arr['phoneNumber'],
+                        'Country' => $country,
+                        '_AccountType'=>$acct,
+                        '_Country0' => $country,
+                        '_CustomerLanguage' => $cust_lang,
+                        '_PracticeAccounts' => $accountInfo,
+                        '_PlatformType' =>$platForm,
+                        '_WWMPassword'=>$_POST['pwd'],
+                        '_WWMUsername'=>$u_name,
+                        '_IntroducingBroker'=>$ibis,
+                        '_PracticeStartLatestDate'=>$updateDate
+                    );
+                }else{
+                    $data = array(
+                        'FirstName' => $data_arr['firstName'],
+                        'LastName'  => $data_arr['lastName'],
+                        'Email'     => $data_arr['emailAddress1'],
+                        'Leadsource' => $source_id,
+                        'Phone1'  => $data_arr['phoneNumber'],
+                        'Country' => $country,
+                        'PostalCode' =>$postal,
+                        'State' =>$state,
+                        'City' =>$city,
+                        'StreetAddress1'=>$address,
+                        '_AccountType'=>$acct,
+                        '_Country0' => $country,
+                        '_CustomerLanguage' => $cust_lang,
+                        '_LiveAccounts' => $accountInfo,
+                        '_PlatformType' =>$platForm,
+                        '_WWMPassword'=>$_POST['pwd'],
+                        '_WWMUsername'=>$u_name,
+                        '_IntroducingBroker'=>$ibis,
+                        '_LiveStartLatestDate'=>$updateDate
+                    );
+                }
+
+                $update = $app->addWithDupCheck($data, 'Email');
+                $app->optIn($data_arr['emailAddress1'],"WWM Support Subscriber");
+
+                //If successful, this will return the contactId
+                $contactId = $update;
+                // Post to IS ends
             }else{
                 $suc='0';
                 $errmsg = $output->errorMessage;
