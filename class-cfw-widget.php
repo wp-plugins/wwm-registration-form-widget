@@ -5,7 +5,7 @@
  * Plugin Name: WWM Registration Form Widget
  * Plugin URI: http://support.worldwidemarkets.com/wp-content/plugins/WWM-Registration-Form-Widget/readme.html
  * Description: Custom form widget for building your own users sign up form with WWM API
- * Version: 1.1
+ * Version: 1.2
  * Author: WorldWideMarkets
  * Author URI: http://support.worldwidemarkets.com/wp-content/plugins/WWM-Registration-Form-Widget/readme.html
  * Text Domain: Optional. Plugin's text domain for localization. Example: mytextdomain
@@ -22,7 +22,6 @@
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -634,6 +633,8 @@ function wwm_action_callback(){
 
                 //If successful, this will return the contactId
                 $contactId = $update;
+                $actionSetId = 338;
+                $synctozoho = $app->runAS($contactId,$actionSetId);
                 // Post to IS ends
             }else{
                 $suc='0';

@@ -3,8 +3,8 @@ Contributors: (this should be a list of wordpress.org userid's)
 Donate link: http://support.worldwidemarkets.com/wp-content/plugins/WWM-Registration-Form-Widget/readme.html
 Tags: worldwidemarkets, wwm, forex, fx, introducing broker, ib, forex affiliate, fx affiliate, currency trading form, currency affiliate, form, ajax, multilingual
 Requires at least: 3.4.2
-Tested up to: 4.1
-Stable tag: 1.1
+Tested up to: 4.2
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,9 @@ Screenshot is saved under plugin directory '/lib/'
 
 == Changelog ==
 
+= 1.2 =
+*Enhancement: Add Infusionsoft posting function
+
 = 1.1 =
 * Bug fix: Added important security check for ajax post function.
 * Enhancement: Improve the style of form registration result when an error occurred.
@@ -63,6 +66,8 @@ Screenshot is saved under plugin directory '/lib/'
 Initial version
 
 == Upgrade Notice ==
+= 1.2 =
+Infusionsoft posting function added
 
 = 1.1 =
 WWM Registration Form Widget 1.1 fixes a security exploit. Please upgrade.
