@@ -548,7 +548,7 @@ function wwm_action_callback(){
                 }
 
                 // Post to IS starts
-                require_once("src/isdk.php");
+             /*   require_once("src/isdk.php");
                 $app = new iSDK;
                 $app->cfgCon("WWM");
                 $updateDate =date('Ymd\TH:i:s');
@@ -634,7 +634,7 @@ function wwm_action_callback(){
                 //If successful, this will return the contactId
                 $contactId = $update;
                 $actionSetId = 338;
-                $synctozoho = $app->runAS($contactId,$actionSetId);
+                $synctozoho = $app->runAS($contactId,$actionSetId);   */
                 // Post to IS ends
             }else{
                 $suc='0';
